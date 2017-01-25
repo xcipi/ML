@@ -1,0 +1,7 @@
+Source:
+    file: '../tests/py/VPN_Events_sample2066_03.xlsx'
+    metasheetname: 'MetaData'
+    datasheetname: 'Data'  
+BigML:
+    id: 
+    api_key: 

@@ -1,0 +1,22 @@
+from openpyxl import Workbook
+from openpyxl import load_workbook
+import re
+
+#WSregex = r"^(Prod|Test|MGMT).*$"
+WSregex = r"^(Prod)|(Test)|(MGMT).*$"
+XlsFile = './SKI-RPI-IPv4 segmentacia.xlsx'
+iter = 0
+iterother = 0
+
+try:
+    wb = load_workbook(XlsFile, read_only=True)
+    for i in wb.get_sheet_names():
+        iter = iter+1
+        sheets[iter] = i
+    for o in sheets:
+        print (sheets[o])
+#        matches = re.finditer(WSregex, i)
+#        for matchNum, match in enumerate(matches):
+#            print (match.group())
+except Exception as e:
+    print (e)
